@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Login() {
+export default function Forgot() {
   return(
     <div>
     <form>
-      <h1>Login</h1>
+      <h1>Forgot</h1>
       <label>
         <p>Username</p>
         <input type="text" />
@@ -15,11 +15,10 @@ export default function Login() {
         <input type="password" />
       </label>
       <div>
-        <button type="submit" >Submit</button>
-
+        <button type="submit">Submit</button>
       </div>
     </form>
-        <Link to="/forgot"> Forgot </Link>
+    <Link to="/login">Login </Link>
     </div>
   )
 }

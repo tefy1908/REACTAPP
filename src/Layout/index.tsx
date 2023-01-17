@@ -13,7 +13,7 @@ const Layout: FC = () => {
   return (
     <div className="App">
       
-      <Button variant="contained" onClick={() => setIsConnected(!isConnected)}>{isConnected ? "public":"private"}</Button>
+      
 
       <div>
       {isConnected ? <Private />: <Public />}

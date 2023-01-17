@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import { FC } from 'react'
 
 
-const Ongoing: FC = () => {
+const RideHistory: FC = () => {
 
   return (
     <div className="App">
-      <h1>on going</h1>
+      <h1>Ride History</h1>
     </div>
   );
 }
 
-export default Ongoing;
+export default RideHistory;
