@@ -8,7 +8,7 @@ import Public from './public';
 
 
 const Layout: FC = () => {
-  const [isConnected, setIsConnected] = useState<boolean>(false);
+  const [isConnected, setIsConnected] = useState<boolean>(true);
 
   return (
     <div className="App">

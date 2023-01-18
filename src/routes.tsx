@@ -1,63 +1,77 @@
 import { Route } from 'react-router-dom';
 import Private from './Views/Private';
 import Public from './Views/Public';
+import Icons from "./assets";
+
 
 
 //import { ReactComponent as partnerIcon } from "assets/img/menu/partner.svg";
 
-const routes = [
+export const LAYOUT_TYPE = {
+  PRIVATE: "/private",
+  PUBLIC: "/public",
+}
+
+interface RoutesInterface {
+  path: string;
+  layout: "/private"|"/public";
+  name?: string;
+  component: React.FC;
+  hidden?: boolean;
+  Icon?: React.FC<{ color?: string }>|any;
+}
+
+
+const routes: RoutesInterface[] = [
   // PRIVATE
   // {
   //   path: "/offer",
   //   layout: "/private",
   //   name: "Demandes",
-  //   icon: incomingIcon,
+  //   Icon: incomingIcon,
   //   component: InComingRides,
   // },
+  {
+    path: "/new-ride",
+    layout: "/private",
+    name: "Réserver un transport",
+    component: Private.NewRide,
+    Icon : Icons.Menu.NewRide,
+   
+  },
+  
   {
     path: "/reservation",
     layout: "/private",
     name: "Réservation",
-    
-    component: Private.Ongoing, // component c element
+    component: Private.Ongoing, 
+    Icon : Icons.Menu.Ongoing,// component c element
   },
   {
-    path: "/RideHistory",
+    path: "/history",
     layout: "/private",
     name: "Historique",
-    
     component: Private.RideHistory,
+    Icon : Icons.Menu.History,
   },
-  {
-    path: "/TestPage",
-    layout: "/private",
-    name: "testpage",
-    
-    component: Private.TestPage,
-  },
-    {
-      path: "/new-ride",
-      layout: "/private",
-      name: "Réserver un transport",
-      
-      style: "primary",
-      component: Private.NewRide,
-  },
+  // {
+  //   path: "/TestPage",
+  //   layout: "/private",
+  //   name: "testpage",
+  //   component: Private.TestPage,
+  // },
   // {
   //   path: "/staff",
   //   layout: "/private",
   //   name: "staff list",
   //   component: StaffPage,
   // },
-  {
-    path: "/OngoingRide",
-    layout: "/private",
-    name: "Réservations en cours",
-    
-    component: Private.OngoingRide,
-  },
-  
-  
+  // {
+  //   path: "/OngoingRide",
+  //   layout: "/private",
+  //   name: "Réservations en cours",
+  //   component: Private.OngoingRide,
+  // },
   {
     hidden: true,
     path: "*",
@@ -84,21 +98,25 @@ const routes = [
     component: Public.Login,
   },
 ];
-    export function getRoutes(layout: '/private' |'/public' ) {
-    return routes.map((prop, key) => {
-      if (prop.layout === layout) {
-        const View = prop.component;
-        return (
-          <Route
-            path={prop.path}
-            element={<View/>}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  }
+
+export function getRoutes(layout: '/private' | '/public') {
+  return routes.map((prop, key) => {
+    if (prop.layout === layout) {
+      const View = prop.component;
+      return (
+        <Route
+          path={prop.path}
+          element={<View />}
+          key={key}
+        />
+      );
+    } else {
+      return null;
+    }
+  });
+}
+export function getLink(layout : '/private' | '/public' ){
+  return 
+}
 
 export default routes;
