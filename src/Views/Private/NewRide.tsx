@@ -6,7 +6,7 @@ const NewRide: FC = () => {
 
   return (
     <div className="App">
-      <h1>New-Ride</h1>
+      list card
     </div>
   );
 }

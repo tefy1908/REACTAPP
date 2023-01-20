@@ -1,10 +1,9 @@
 import { SvgIcon } from "@mui/material";
 import { createSvgIcon } from "@mui/material/utils";
 import * as React from "react";
+import { IconPropsInterface } from "./type";
 
-interface IconPropsInterface {
-  color?: string
-}
+
 
 export const NewRide: React.FC<IconPropsInterface> = ({ color = "white" }) => (
   <svg
