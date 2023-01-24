@@ -11,7 +11,7 @@ const App: FC = () => {
     <Box sx={{ bgcolor : "#E5E5E5", height: "100vh", width: "100vw", display:"inline-flex", flexDirection :'row'}}>
     
     
-    <Box height={"900px"} width={"125px"} bgcolor={""} borderRight={2} borderRadius={4} borderColor={"solid #E5E5E5"} borderBottom={2}><C.SideBar /></Box>
+    <Box height={"100vh"} width={"125px"} bgcolor={""} borderRight={2} borderRadius={4} borderColor={"solid #E5E5E5"} borderBottom={2}><C.SideBar /></Box>
     
     <Box flexGrow={"1"} marginLeft={"116px"}>
     <Box>

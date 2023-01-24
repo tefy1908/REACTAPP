@@ -19,15 +19,9 @@ const Header: React.FC = () => {
                     {getRoutes("/private")}
                 </Routes>
             </Box>
-            <Box bgcolor={""} textAlign={"center"}> 
-                <Stack direction="row" spacing={2}>
-                    <Paper>
-                        <MenuList>
-                            <MenuItem>Profile</MenuItem>
-                            
-                            <MenuItem>Vide</MenuItem>
-                        </MenuList>
-                    </Paper>
+            <Box bgcolor={""} textAlign={"right"} marginRight={'30px'}> 
+                
+                    
 
                     <Button
 
@@ -38,7 +32,7 @@ const Header: React.FC = () => {
 
 
                     </Button>
-                    </Stack>
+                    
 
 
             </Box>
