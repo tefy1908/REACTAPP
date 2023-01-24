@@ -8,16 +8,11 @@ import Public from './public';
 
 
 const Layout: FC = () => {
-  const [isConnected, setIsConnected] = useState<boolean>(true);
+  const [isConnected, setIsConnected] = useState<boolean>(false);
 
   return (
     <Box flex={1}>
-      
-      
-
-      <div>
-      {isConnected ? <Private />: <Public />}
-      </div>
+      {isConnected ? <Private /> : <Public />}
     </Box>
 
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Drawer, Box } from '@mui/material';
+import { Drawer, Box, Grid } from '@mui/material';
 import routes, { LAYOUT_TYPE } from '../routes';
 import { Link } from 'react-router-dom';
 import { Image, RoundaboutLeft } from '@mui/icons-material';
@@ -10,11 +10,15 @@ import { bgcolor } from '@mui/system';
 
 const SideBar: React.FC = () => {
   return (
-    <Box height={"100%"} bgcolor={""}>
-      <Box bgcolor={""}>Logo Resaam</Box>
+    <Box bgcolor={""} display={"flex"} flexDirection={"column"}>
+      
+      <Box bgcolor={""}><Icons.Menu.logo /></Box>
       <Box>
+        <Icons.Menu.logosidebar /></Box>
+      <Box marginTop={"117px"}>
+      <Box gap={"60px"} display={"flex "} flexDirection={"column"} flexGrow={1} textAlign={"center"}>
         {routes.map(({ Icon, path, hidden, layout, name }, key) => layout === LAYOUT_TYPE.PRIVATE && !hidden && (
-          <Box key={key} style={{ backgroundColor: "", justifyContent: "space-between" }}>
+          <Box key={key} style={{ backgroundColor: ""} }>
             <Link to={path}>
               <Box
                 >
@@ -26,11 +30,14 @@ const SideBar: React.FC = () => {
           </Box>
         ))}
       </Box>
-      <Box bgcolor={""}>parametre</Box>
+      
+      <Box marginLeft={"22px"} marginTop={"204px"}><Icons.Menu.parametre /></Box>
+    </Box>
     </Box>
   );
   
   ;
 }
+
 
 export default SideBar;

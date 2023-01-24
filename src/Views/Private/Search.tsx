@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import { FC } from 'react'
 
 
-const NewRide: FC = () => {
+const Search: FC = () => {
 
   return (
     <div className="App">
-      <h1> New Ride</h1>
+      Recherche
     </div>
   );
 }
 
-export default NewRide;
+export default Search;

@@ -5,6 +5,7 @@ import TestPage from "./TestPage";
 import RideHistory from "./RideHistory";
 import OngoingRide from "./OngoingRide";
 import NewRide from "./NewRide";
+import Search from "./Search";
 export default {
     Ongoing,
     Settings,
@@ -13,4 +14,6 @@ export default {
     RideHistory,
     OngoingRide,
     NewRide,
+    Search,
+    
 }
