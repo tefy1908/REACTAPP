@@ -1,24 +1,19 @@
 
+import { Box} from '@mui/material';
 import { FC, useState } from 'react'
 
-import Button from '@mui/material/Button';
 import Private from './private';
 import Public from './public';
 
 
 
 const Layout: FC = () => {
-  const [isConnected, setIsConnected] = useState<boolean>(true);
+  const [isConnected, setIsConnected] = useState<boolean>(false);
 
   return (
-    <div className="App">
-      
-      
-
-      <div>
-      {isConnected ? <Private />: <Public />}
-      </div>
-    </div>
+    <Box flex={1}>
+      {isConnected ? <Private /> : <Public />}
+    </Box>
 
   );
 }

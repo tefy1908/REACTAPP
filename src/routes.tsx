@@ -54,6 +54,13 @@ const routes: RoutesInterface[] = [
     component: Private.RideHistory,
     Icon : Icons.Menu.History,
   },
+  {
+    hidden: true,
+    path: "/Search",
+    layout: "/private",
+    name: "Rechercher",
+    component: Private.Search,
+  },
   // {
   //   path: "/TestPage",
   //   layout: "/private",
@@ -97,6 +104,7 @@ const routes: RoutesInterface[] = [
     path: `*`,
     component: Public.Login,
   },
+ 
 ];
 
 export function getRoutes(layout: '/private' | '/public') {
